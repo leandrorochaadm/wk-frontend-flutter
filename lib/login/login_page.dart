@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
+import 'package:wk/usuario/usuario_page_crud.dart';
 import 'package:wk/usuario/usuario_page_list.dart';
 
 import 'custom_icon_button.dart';
@@ -87,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                       builder: (_) {
                         return SizedBox(
                           height: 44,
+                          width: 90,
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32),
@@ -105,7 +107,27 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         );
                       },
-                    )
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    SizedBox(
+                      width: 90,
+                      height: 44,
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: Text('Cadastra-se'),
+                        color: Theme.of(context).primaryColor,
+                        disabledColor:
+                            Theme.of(context).primaryColor.withAlpha(100),
+                        textColor: Colors.white,
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(UsuarioPageCrud.tag);
+                        },
+                      ),
+                    ),
                   ],
                 ),
               )),
