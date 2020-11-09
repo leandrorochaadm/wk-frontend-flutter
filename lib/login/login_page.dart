@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
     loginController = Provider.of<LoginController>(context);
 
     disposer = reaction((_) => loginController.loggedIn, (loggedIn) {
-      if (loggedIn) Navigator.of(context).pushNamed(UsuarioPageList.tag);
+      if (loggedIn) Navigator.of(context).popAndPushNamed(UsuarioPageList.tag);
     });
   }
 

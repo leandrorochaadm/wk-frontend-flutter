@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+import 'package:wk/usuario/usuario_repository.dart';
 
 part 'login_controller.g.dart';
 
@@ -45,11 +46,16 @@ abstract class _LoginController with Store {
   Future<void> login() async {
     loading = true;
 
-    await Future.delayed(Duration(seconds: 2));
+    //await Future.delayed(Duration(seconds: 2));
+
+    UsuarioRepository usuarioRepository = UsuarioRepository();
+    if (await usuarioRepository.login(email, password) == true) {
+      loggedIn = true;
+    } else {
+      loggedIn = false;
+    }
 
     loading = false;
-    loggedIn = true;
-
     email = "";
     password = "";
   }
