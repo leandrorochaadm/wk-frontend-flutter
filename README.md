@@ -15,7 +15,7 @@ Você pode executar seu aplicativo em qualquer sistema operacional com ambiente 
 flutter run
 ```
 
-O aplicativo para ser usado é necessário o servidor (backend) rodando no endpoint `http://localhost:8080/wk-backend-wildfly`. Veja sobre o backend nesse link https://github.com/leandrorochaadm/wk-backend-javaee
+O aplicativo para ser usado é necessário o servidor (backend) rodando no endpoint `http://localhost:8080/wk-backend-wildfly`. Veja sobre o backend nesse link https://github.com/leandrorochaadm/wk-backend-wildfly
 
 ## Criação de um executável nativo Windows
 
