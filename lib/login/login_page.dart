@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                                     valueColor:
                                         AlwaysStoppedAnimation(Colors.white),
                                   )
-                                : Text('Login'),
+                                : Text('Entrar'),
                             color: Theme.of(context).primaryColor,
                             disabledColor:
                                 Theme.of(context).primaryColor.withAlpha(100),
