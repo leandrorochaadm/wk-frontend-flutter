@@ -49,6 +49,12 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    Expanded(
+                      child: Image.asset(
+                        "assets/img/logo.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                     Observer(
                       builder: (_) {
                         return CustomTextField(
