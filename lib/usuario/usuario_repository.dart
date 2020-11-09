@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dio/dio.dart';
 import 'package:wk/usuario/usuario_model.dart';
 
@@ -50,5 +52,11 @@ class UsuarioRepository {
     // print("delete: $usuario");
     Response response = await dio.delete(
         'http://localhost:8080/wk-backend-wildfly/usuarios/${usuario.id}');
+  }
+
+  Future<bool> login(String email, String senha) async {
+    Response response = await dio.get(
+        'http://localhost:8080/wk-backend-wildfly/usuarios/login?email=$email&senha=$senha');
+    return response.statusCode == 200 ? true : false;
   }
 }
